@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1><%= Guess.game_over? ? "You Won" : "" %></h1>
+    <h2>Guess my color</h2>
+    <form method="POST" action="http://localhost:4567/color">
+      <input type="text" name="color" size="30" x-webkit-speech oninput="this.form.submit()"/>
+    </form>
+  </body>
+</html>
