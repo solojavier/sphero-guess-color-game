@@ -17,11 +17,19 @@ This is just a proof of concept but I will continue to develop it with better sh
 
 If you have any feedback feel free to open an issue.
 
+## How to run
+
+1. Pair your sphero to your machine
+1. Using multicom listen to sphero on port 1234
+1. run ```bundle install```
+1. run ```rackup```
+1. Go to http://localhost:9292/
+1. Click on microphone to guess color until game is over
+
 ## Future features
 
 * Better UI
 * More languages to be spoken
-* Tests
 
 ## Contribute
 

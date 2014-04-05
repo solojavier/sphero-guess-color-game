@@ -1,12 +1,23 @@
-require 'sinatra'
-require_relative 'guess'
+require 'sinatra/base'
+require_relative 'game'
 
-post '/color' do
-  Guess.set_color params[:color].downcase
+class MyApp < Sinatra::Base
 
-  redirect '/'
-end
+  post '/color' do
+    if GAME.over?
+      redirect '/end'
+    else
+      GAME.guess_color(params[:color].downcase)
+      redirect '/'
+    end
+  end
 
-get '/' do
-  erb :index
+  get '/' do
+    erb :index
+  end
+
+  get '/end' do
+    erb :end
+  end
+
 end

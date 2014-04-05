@@ -1,1 +1,5 @@
 gem 'sinatra'
+gem 'rspec'
+gem 'artoo'
+gem 'artoo-sphero'
+gem 'rest-client'
